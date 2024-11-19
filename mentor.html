@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor Profile Form</title>
+    <link rel="stylesheet" href="mentor.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul class="menu">
+              <li><a href="home.html">Home</a></li>
+              <li><a href="profile.html">Profile</a></li>
+              <li><a href="dash.html">Dashboard</a></li>
+              <li><a href="chatbox.html">ChatBox</a></li>
+            </ul>
+          </nav>
+        <h1>Mentor Profile Form</h1>
+        <form id="mentorProfileForm">
+            <div class="profile-picture-container">
+                <label for="profilePicture" class="profile-picture-label">
+                    <img src="profile.jpg" alt="Choose Profile Picture" id="profileImage">
+                    <input type="file" id="profilePicture" name="profilePicture" accept=".pdf,.jpg,.jpeg,.png">
+                </label>
+            </div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email ID:</label>
+            <input type="email" id="email" required>
+
+            <label for="employeeId">Employee ID:</label>
+            <input type="text" id="employeeId" required>
+
+            <label for="contactNumber">Contact Number:</label>
+            <input type="tel" id="contactNumber" required>
+
+            <label for="position">Position:</label>
+            <input type="text" id="position" required>
+
+            <label for="specialization">Specialization:</label>
+            <input type="text" id="specialization" required>
+
+            <button type="submit">Submit</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

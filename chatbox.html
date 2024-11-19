@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor-Student Chatbox</title>
+    <link rel="stylesheet" href="chatbox.css">
+</head>
+<body>
+    <div class="chat-container">
+        <nav>
+            <ul class="menu">
+              <li><a href="home.html">Home</a></li>
+              <li><a href="profile.html">Profile</a></li>
+              <li><a href="dash.html">Dashboard</a></li>
+              <li><a href="chatbox.html">ChatBox</a></li>
+            </ul>
+          </nav>
+        <header class="chat-header">
+            <h2>Mentor-Student Chat</h2>
+            <a href="https://zoom.us" target="_blank" class="zoom-link">Start Zoom Meeting</a>
+        </header>
+        <div id="chatMessages" class="chat-messages"></div>
+        <form id="chatForm" class="chat-form" enctype="multipart/form-data">
+            <input type="file" id="fileInput" style="display: none;" />
+            <label for="fileInput" class="file-label">🖇</label>
+            <input type="text" id="messageInput" placeholder="Type your message" required />
+            <button type="submit">Send</button>
+        </form>
+    </div>
+    <script src="chatbox.js"></script>
+</body>
+</html>
