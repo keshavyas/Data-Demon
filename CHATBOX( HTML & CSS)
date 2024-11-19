@@ -1,0 +1,144 @@
+//HTML FOR CHATBOX.
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor-Student Chatbox</title>
+    <link rel="stylesheet" href="chatbox.css">
+</head>
+<body>
+    <div class="chat-container">
+        <nav>
+            <ul class="menu">
+              <li><a href="#home">Home</a></li>
+              <li><a href="profile.html">Profile</a></li>
+              <li><a href="dash.html">Dashboard</a></li>
+              <li><a href="chatbox.html">ChatBox</a></li>
+            </ul>
+          </nav>
+        <header class="chat-header">
+            <h2>Mentor-Student Chat</h2>
+            <a href="https://zoom.us" target="_blank" class="zoom-link">Start Zoom Meeting</a>
+        </header>
+        <div id="chatMessages" class="chat-messages"></div>
+        <form id="chatForm" class="chat-form" enctype="multipart/form-data">
+            <input type="file" id="fileInput" style="display: none;" />
+            <label for="fileInput" class="file-label">🖇</label>
+            <input type="text" id="messageInput" placeholder="Type your message" required />
+            <button type="submit">Send</button>
+        </form>
+    </div>
+    <script src="chatbox.js"></script>
+</body>
+</html>
+
+//CSS FOR CHATBOX.
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: azure;
+}
+
+nav {
+    background-color: #f8f9fa; 
+    padding: 10px 20px;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; 
+  }
+  
+  ul.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center;
+  }
+  
+  ul.menu li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  ul.menu li a:hover {
+    background-color: #007bff; 
+    color: #fff; 
+    border-radius: 5px;
+  }
+
+.chat-container {
+    max-width: 600px;
+    margin: 50px auto;
+    
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.chat-header {
+    background: #007bff;
+    color: white;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header .zoom-link {
+    background: white;
+    color: #007bff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.chat-messages {
+    padding: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+    background: #f9f9f9;
+}
+
+.chat-form {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    background: #fff;
+}
+
+.chat-form input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.chat-form .file-label {
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.chat-form button {
+    padding: 10px 15px;
+    background: #4273db;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.chat-form button:hover {
+    background: #7b9fc5;
+}
